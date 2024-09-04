@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .center-container{
+        @apply flex  h-[30vh] items-center justify-center
+    }
+    .to-do-container{
+        @apply w-[95%] md:w-[80%] lg:w-[60%] bg-gray-100  rounded-md shadow-lg h-auto p-6 ;
+    }
+}
+ ul.lists li{
+    list-style: none;
+    position: relative;
+    padding:1rem;
+    margin-left: 1.5rem;
+    text-wrap: wrap;
+}
+ ul.lists li::before {
+    content: '';
+    background-image: url('https://icons.veryicon.com/png/o/miscellaneous/traditional-chinese-medicine-fuxing-icon/unchecked-35.png');
+    background-size: cover;
+    display: inline-block;
+    width: 45px;
+    border-radius: 50%;
+    height: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -1rem;
+    margin-left: -1rem;
+    top: 0.5rem;
+    cursor: pointer;
+  }
+ ul.lists li.tik{
+    text-decoration: line-through;
+  }
+  ul.lists li.tik::before{
+    content: '';
+    background-image: url('https://icons.veryicon.com/png/o/miscellaneous/basic-elements/checked-5.png');
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -0.5rem;
+    margin-left: -1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+
+
+  ul li span{
+    position: absolute;
+    right: 0.5em;
+    top: 5px;
+    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+  }
+@media (max-width: 480px) {
+  ul{
+    width: 30%;
+
+  }
+  }
